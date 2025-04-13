@@ -9,7 +9,7 @@ Cualquier condición en Python se evalúa como True (verdadero) o False (falso).
 Las condiciones bien escritas hacen que el código sea flexible e inteligente.
 Esta es una de las habilidades más importantes de un programador.
 
----
+<hr style="border-top: 1px solid #d1d9e0;">
 La forma más simple de comprobar una condición y ejecutar un código solo si esa condición es verdadera (True) es usando la palabra clave **if**.
 
 Ejemplo:
@@ -17,7 +17,7 @@ Ejemplo:
 age = 20
 
 if age > 18:
-  print("¡Ya eres un adulto!")
+  print('¡Ya eres un adulto!')
 ```
 Primero se crea una variable llamada **age** y se le asigna el valor **20**. Luego, después de la palabra clave **if**, se escribe la condición **age > 18**. Si el resultado de la condición es verdadero (True), se ejecuta el código dentro del bloque **if**. Si el resultado es falso (False), el código dentro del bloque **if** simplemente se omite, y el programa continúa con la siguiente parte.
 
