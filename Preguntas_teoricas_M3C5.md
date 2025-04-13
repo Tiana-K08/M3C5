@@ -1,4 +1,4 @@
-# ¿Qué es un condicional?
+## ¿Qué es un condicional?
 Los condicionales permiten que los programas reaccionen de diferentes maneras ante distintas situaciones y se comporten de forma dinámica. Un programa puede ejecutar distintos bloques de código dependiendo de ciertas condiciones.
 
 Se puede imaginar que el programa "pregunta":
@@ -8,6 +8,7 @@ Dependiendo de la respuesta, se ejecuta un bloque de código específico.
 Cualquier condición en Python se evalúa como True (verdadero) o False (falso).
 Las condiciones bien escritas hacen que el código sea flexible e inteligente.
 Esta es una de las habilidades más importantes de un programador.
+
 ---
 La forma más simple de comprobar una condición y ejecutar un código solo si esa condición es verdadera (True) es usando la palabra clave **if**.
 
