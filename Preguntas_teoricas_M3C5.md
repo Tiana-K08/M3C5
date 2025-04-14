@@ -256,3 +256,36 @@ for username in usernames:
 # ansa is allowed
 ```
 Aquí, el bucle recorre todos los elementos de la colección uno por uno. Cuando la condición **if** es verdadera (**True**), el ciclo no se detiene gracias al operador **continue**, sino que pasa al siguiente elemento de la lista y continúa hasta que se hayan recorrido todos los elementos.
+
+# ¿Qué es una lista por comprensión en Python?
+**List Comprehension** es una sintaxis especial en Python que permite crear listas a partir de otras colecciones en una sola línea de código.
+
+Ejemplo: *Supongamos que tenemos una lista de números y queremos incrementar cada uno de ellos en 2.*
+Sintaxis estándar:
+```
+numbers = [3, 5, 7, 2, 9, 6, 1, 8]
+new_numbers = []
+
+for number in numbers:
+  new_numbers.append(number + 2)
+
+print(new_numbers)
+
+# [5, 7, 9, 4, 11, 8, 3, 10]
+```
+Sintaxis List Comprehension:
+```
+numbers = [3, 5, 7, 2, 9, 6, 1, 8]
+new_numbers = [number + 2 for number in numbers]
+
+print(new_numbers)
+
+# [5, 7, 9, 4, 11, 8, 3, 10]
+```
+Esta sintaxis es más compacta y legible. En ambos casos, el resultado será el mismo.
+
+Sin embargo, hay situaciones en las que no se recomienda utilizar List Comprehension:
+- la lógica es demasiado compleja;
+- la expresión es muy larga y se pierde la legibilidad;
+- hay muchas condiciones o bucles anidados.
+En esos casos, es mejor usar la sintaxis del bucle **for** tradicional.
