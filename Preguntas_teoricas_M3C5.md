@@ -33,7 +33,7 @@ age = 5
 if age > 18:
   print("¡Ya eres un adulto!")
 else:
-  print("¡Eres joven todavía!") | ¡Eres joven todavía!
+  print("¡Eres joven todavía!") # ¡Eres joven todavía!
 ```
 Aquí, si la condición es verdadera (True), se ejecutará el bloque de código después de **if**, pero si la condición es falsa (False), entonces el programa ejecutará el bloque de código después de **else**.
 
@@ -49,7 +49,7 @@ if temperature < 0:
 elif temperature < 20:
   print("Hace fresco")
 elif temperature < 30:
-  print("Hace calor") | Hace calor
+  print("Hace calor") # Hace calor
 else:
   print("Hace mucho calor")
 ```
@@ -62,7 +62,7 @@ Ejemplo:
 ```
 age = 14
 status = "Mayor de edad" if age >= 18 else "Menor de edad"
-print(status) | Menor de edad
+print(status) # Menor de edad
 ```
 ***¡Importante!*** el operador ternario es conveniente, pero si la expresión se vuelve demasiado larga o confusa, es mejor usar un if normal. El código siempre debe permanecer legible.
 
@@ -78,7 +78,7 @@ age = 20
 has_license = True
 
 if age >= 18 and has_license:
-  print("¡Puedes conducir!") | ¡Puedes conducir!
+  print("¡Puedes conducir!") # ¡Puedes conducir!
 else:
   print("No puedes conducir.")
 ```
@@ -87,7 +87,7 @@ Ejemplo:
 ticket_type = "estudiante"
 
 if ticket_type == "jubilado" or ticket_type == "estudiante":
-  print("¡Descuento aplicado!") | ¡Descuento aplicado!
+  print("¡Descuento aplicado!") # ¡Descuento aplicado!
 else:
   print("Precio completo.")
 ```
@@ -96,7 +96,7 @@ Ejemplo:
 name = ""
 
 if not name:
-  print("No ingresaste un nombre") | No ingresaste un nombre
+  print("No ingresaste un nombre") # No ingresaste un nombre
 else:
   print(f"¡Hola, {name}!")
 ```
@@ -113,7 +113,7 @@ is_black_friday = True
 total = 1200
 
 if (has_coupon or is_black_friday) and total >= 1000:
-  print("¡Descuento aplicado!") | ¡Descuento aplicado!
+  print("¡Descuento aplicado!") # ¡Descuento aplicado!
 else:
   print("Descuento no disponible")
 ```
@@ -123,7 +123,7 @@ password = ""
 face_id = False
 
 if not password or not face_id:
-  print("No se pudo verificar") | No se pudo verificar
+  print("No se pudo verificar") # No se pudo verificar
 else:
   print("Acceso autorizado")
 ```
@@ -132,8 +132,8 @@ else:
 Las condiciones en Python suelen usar operadores de comparación. 
 Lista de operadores de comparación en Python:
 *(se utilizan para comparar números)*
-- > mayor que
-- >= mayor o igual que
+- \> mayor que
+- \>= mayor o igual que
 - < menor que
 - <= menor o igual que
 *(se utilizan para comparar diferentes tipos de datos)*
