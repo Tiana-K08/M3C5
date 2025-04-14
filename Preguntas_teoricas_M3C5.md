@@ -103,6 +103,17 @@ else:
 
 De la misma manera, también podemos comprobar más de dos condiciones al mismo tiempo.
 
+Ejemplo:
+```
+password = ""
+face_id = False
+
+if not password or not face_id:
+  print("No se pudo verificar") # No se pudo verificar
+else:
+  print("Acceso autorizado")
+```
+
 ***¡Importante!*** Python siempre evalúa las condiciones de izquierda a derecha.
 Por eso, si hay varios operadores en una misma expresión, es mejor usar paréntesis para mayor claridad.
 
@@ -117,27 +128,19 @@ if (has_coupon or is_black_friday) and total >= 1000:
 else:
   print("Descuento no disponible")
 ```
-Ejemplo:
-```
-password = ""
-face_id = False
-
-if not password or not face_id:
-  print("No se pudo verificar") # No se pudo verificar
-else:
-  print("Acceso autorizado")
-```
 
 ---
-Las condiciones en Python suelen usar operadores de comparación. 
-Lista de operadores de comparación en Python:
+Las condiciones en Python suelen usar operadores de comparación. Lista de operadores de comparación en Python:
+
 *(se utilizan para comparar números)*
 - \> mayor que
 - \>= mayor o igual que
 - < menor que
 - <= menor o igual que
+
 *(se utilizan para comparar diferentes tipos de datos)*
 - == igualdad
 - != desigualdad
+
 *(operador obsoleto)*
 - <> desigualdad (Un operador obsoleto que no se debe usar, pero que aún puede encontrarse en programas antiguos. Este operador se utilizaba para comprobar la desigualdad entre números.)
