@@ -21,7 +21,7 @@ if age > 18:
 ```
 Primero se crea una variable llamada **age** y se le asigna el valor **20**. Luego, después de la palabra clave **if**, se escribe la condición **age > 18**. Si el resultado de la condición es verdadero (True), se ejecuta el código dentro del bloque **if**. Si el resultado es falso (False), el código dentro del bloque **if** simplemente se omite, y el programa continúa con la siguiente parte.
 
-***¡Importante!*** En Python, la indentación (los espacios al inicio de la línea) es muy importante. El bloque de código dentro del **if** debe tener una sangría (normalmente 2 o 4 espacios).
+***¡Importante!*** En Python, la indentación (los espacios al inicio de la línea) es muy importante. El bloque de código dentro del **if** debe tener una vacío (normalmente 2 o 4 espacios).
 
 ---
 A veces necesitamos que el programa ejecute dos instrucciones diferentes. La primera si la condición es verdadera (True) y la segunda si es falsa (False). En este caso, se utiliza la construcción **if / else**.
@@ -144,3 +144,115 @@ Las condiciones en Python suelen usar operadores de comparación. Lista de opera
 
 *(operador obsoleto)*
 - <> desigualdad (Un operador obsoleto que no se debe usar, pero que aún puede encontrarse en programas antiguos. Este operador se utilizaba para comprobar la desigualdad entre números.)
+
+# ¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?
+Los bucles son una de las herramientas fundamentales en la programación, que permiten ejecutar repetidamente un bloque de código varias veces. Esto es útil cuando se necesita procesar grandes volúmenes de datos (por ejemplo, recorrer los elementos de una lista o realizar cálculos varias veces). En Python existen dos tipos de bucles: **for** y **while**.
+
+El bucle **for** es ideal para recorrer elementos de colecciones, mientras que el bucle **while** se utiliza para ejecutar código mientras se cumpla una condición determinada. Ambos bucles tienen sus particularidades, y es importante elegir el tipo de bucle adecuado según la tarea.
+
+---
+El bucle **for** se utiliza para recorrer elementos (por ejemplo, en una lista, cadena, conjunto o diccionario). Continúa mientras haya elementos por recorrer y se detiene automáticamente cuando llega al final del objeto.
+
+Ejemplo:
+```
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+  print(fruit)
+
+# apple
+# banana
+# cherry
+```
+En este ejemplo, el bucle **for** recorre cada elemento de la lista **fruits** y lo muestra en pantalla. No sabemos de antemano cuántos elementos hay en la lista, pero el bucle se detendrá automáticamente cuando los haya recorrido todos.
+
+***¡Importante!*** Al igual que en las estructuras condicionales, los bloques de código dentro de los bucles deben tener vacío (normalmente de 2 o 4 espacios).
+
+***¡Importante!*** Es una práctica común nombrar la variable del bloque en singular, basada en el nombre de la colección.
+
+---
+El bucle **while** ejecuta un bloque de código mientras la condición se mantenga verdadera. Esta condición se verifica antes de cada iteración. Si la condición se vuelve falsa, el bucle se detiene. Normalmente, en un bucle **while** se establece un contador de iteraciones (de lo contrario, el bucle puede volverse infinito). El punto en el que el bucle se detiene se llama valor de control.
+
+El bucle **while** es útil cuando no se conoce de antemano la cantidad de iteraciones y el bucle debe continuar hasta que se cumpla una condición específica.
+
+Ejemplo:
+```
+counter = 0
+
+while counter < 5:
+  print(counter)
+  counter += 1
+
+# 0
+# 1
+# 2
+# 3
+# 4
+```
+En este ejemplo, el bucle **while** se sigue ejecutando mientras la variable **counter** sea menor que **5**. Después de cada iteración, el valor de **counter** se incrementa en **1**, y cuando alcanza el valor **5**, la condición se vuelve falsa y el programa termina la ejecución del bucle.
+
+***¡Importante!*** Si la condición siempre es verdadera (por ejemplo, **True**), el bucle será infinito. Por eso, es fundamental controlar cuidadosamente la condición en un bucle while para evitar errores.
+
+Ejemplo:
+```
+counter = 10
+
+while counter > 5:
+  print(counter)
+  counter += 1
+
+# infinite loop
+```
+En este ejemplo, el bucle **while** se ejecutará infinitamente porque la condición **counter > 5** siempre es verdadera (**True**). Esto significa que Python continuará ejecutando el bloque de código dentro del bucle sin detenerse, sin verificar ninguna otra condición.
+
+---
+En Python, se pueden usar dos operadores para controlar la ejecución de los bucles: **break** (para salir del bucle si se alcanza un resultado determinado) y **continue** (para omitir la iteración actual y pasar a la siguiente).
+
+El operador **break** se utiliza para salir del bucle de forma inmediata, sin importar cuántas iteraciones queden. Esto permite finalizar la ejecución del bucle si se cumple una condición específica.
+
+Ejemplo:
+```
+usernames = [
+  "Jon",
+  "Tyrion",
+  "Cersei",
+  "Sansa",
+]
+
+for username in usernames:
+  if username == "Cersei":
+    print(f"{username} was found at index {usernames.index(username)}")
+    break
+  print(username)
+
+
+# Jon
+# Tyrion
+# Cersei was found at index 2
+```
+Aquí, el bucle recorrerá uno por uno los nombres de la lista hasta que encuentre el nombre **"Cersei"**. En ese momento, gracias al operador **break**, finalizará su ejecución.
+
+El operador **continue** omite el resto del código en la iteración actual del bucle y pasa directamente a la siguiente. Esto significa que, si dentro del bucle se ejecuta **continue**, todas las líneas de código restantes en el cuerpo del bucle se ignoran, y el ciclo continúa con la siguiente iteración.
+
+Ejemplo:
+```
+usernames = [
+  "Jon",
+  "Tyrion",
+  "Cersei",
+  "Sansa",
+]
+
+for username in usernames:
+  if username == "Tyrion":
+    print(f"Sorry, {username}, you are not allowed")
+    continue
+  else:
+    print(f"{username} is allowed")
+
+# Jon is allowed
+# Sorry, Tyrion, you are not allowed
+# Cersei is allowed
+# ansa is allowed
+```
+Aquí, el bucle recorre todos los elementos de la colección uno por uno. Cuando la condición **if** es verdadera (**True**), el ciclo no se detiene gracias al operador **continue**, sino que pasa al siguiente elemento de la lista y continúa hasta que se hayan recorrido todos los elementos.
