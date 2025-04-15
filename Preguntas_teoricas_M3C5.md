@@ -1,4 +1,9 @@
-[¿Qué es un condicional?](#qué-es-un-condicional)
+1. [¿Qué es un condicional?](#qué-es-un-condicional)
+2. [¿Cuáles son los diferentes tipos de bucles en Python? ¿Por qué son útiles?](#cuáles-son-los-diferentes-tipos-de-bucles-en-python-por-qué-son-útiles)
+3. [¿Qué es una lista por comprensión en Python?](#qué-es-una-lista-por-comprensión-en-python)
+4. [¿Qué es un argumento en Python?](#qué-es-un-argumento-en-python)
+5. [¿Qué es una función Lambda en Python?](#qué-es-una-función-lambda-en-python)
+6. [¿Qué es un paquete pip?](#qué-es-un-paquete-pip)
 
 # ¿Qué es un condicional?
 Los condicionales permiten que los programas reaccionen de diferentes maneras ante distintas situaciones y se comporten de forma dinámica. Un programa puede ejecutar distintos bloques de código dependiendo de ciertas condiciones.
