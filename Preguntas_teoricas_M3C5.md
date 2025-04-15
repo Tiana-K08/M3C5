@@ -1,3 +1,5 @@
+[¿Qué es un condicional?](#qué-es-un-condicional)
+
 # ¿Qué es un condicional?
 Los condicionales permiten que los programas reaccionen de diferentes maneras ante distintas situaciones y se comporten de forma dinámica. Un programa puede ejecutar distintos bloques de código dependiendo de ciertas condiciones.
 
@@ -478,7 +480,7 @@ greeting(full_name("Tetiana", "Kononenko"))
 En Python es posible utilizar paquetes de terceros, escritos por otros desarrolladores, para ampliar las funcionalidades de nuestros programas. Estos paquetes están disponibles en el repositorio oficial de paquetes de Python — **PyPI (Python Package Index)**, que también se conoce como la **"tienda de quesos"**, donde se almacenan decenas de miles de bibliotecas de Python para todo tipo de necesidades.
 
 ---
-Y aquí es donde utilizamos el gestor de paquetes **pip** (“pip installs packages” o “pip installs Python”) — una herramienta sin la cual es difícil imaginar el desarrollo moderno en Python (es como npm en el mundo de JavaScript).
+Y aquí es donde utilizamos el gestor de paquetes **pip** (“pip installs packages” o “pip installs Python”) — una herramienta sin la cual es difícil imaginar el desarrollo moderno en Python (es como **NPM** en el mundo de JavaScript).
 Para instalar **pip** en tu computadora:
 1. Ve a la página de descarga: https://bootstrap.pypa.io/get-pip.py
 2. Guarda el archivo ***get-pip.py*** en tu computadora.
