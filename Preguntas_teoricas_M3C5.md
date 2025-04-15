@@ -479,7 +479,7 @@ En Python es posible utilizar paquetes de terceros, escritos por otros desarroll
 
 Y aquí es donde utilizamos el gestor de paquetes **pip** (“pip installs packages” o “pip installs Python”) — una herramienta sin la cual es difícil imaginar el desarrollo moderno en Python (es como npm en el mundo de JavaScript).
 Para instalar **pip** en tu computadora:
-1. Ve a la página de descarga: (https://bootstrap.pypa.io/get-pip.py)
+1. Ve a la página de descarga: https://bootstrap.pypa.io/get-pip.py
 2. Guarda el archivo ***get-pip.py*** en tu computadora.
 3. Abre la terminal o la línea de comandos y ejecuta:
 ```
@@ -489,6 +489,8 @@ python get-pip.py
 ```
 pip --version
 ```
+
+
 
 **Un paquete pip** es una biblioteca publicada en PyPI.
 Para instalar un paquete usando pip, simplemente escribe en la terminal:
