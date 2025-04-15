@@ -470,8 +470,30 @@ def full_name(first, last):
 def greeting(user):
   print(f"Hi, {user}!")
 
-  
+
 greeting(full_name("Tetiana", "Kononenko"))
 ```
 
 # ¿Qué es un paquete pip?
+En Python es posible utilizar paquetes de terceros, escritos por otros desarrolladores, para ampliar las funcionalidades de nuestros programas. Estos paquetes están disponibles en el repositorio oficial de paquetes de Python — **PyPI (Python Package Index)**, que también se conoce como la **"tienda de quesos"**, donde se almacenan decenas de miles de bibliotecas de Python para todo tipo de necesidades.
+
+Y aquí es donde utilizamos el gestor de paquetes **pip** (“pip installs packages” o “pip installs Python”) — una herramienta sin la cual es difícil imaginar el desarrollo moderno en Python (es como npm en el mundo de JavaScript).
+Para instalar **pip** en tu computadora:
+1. Ve a la página de descarga: (https://bootstrap.pypa.io/get-pip.py)
+2. Guarda el archivo ***get-pip.py*** en tu computadora.
+3. Abre la terminal o la línea de comandos y ejecuta:
+```
+python get-pip.py
+```
+4. Después de la instalación, puedes verificar si todo funciona correctamente con:
+```
+pip --version
+```
+
+**Un paquete pip** es una biblioteca publicada en PyPI.
+Para instalar un paquete usando pip, simplemente escribe en la terminal:
+```
+pip install nombre_del_paquete
+```
+
+De esta manera, podemos hacer que nuestros proyectos sean más flexibles y escalables, ampliando su funcionalidad mediante el uso de nuevas bibliotecas.
