@@ -413,7 +413,7 @@ greeting(first = "Tetiana", last = "Kononenko")
 ```
 
 ---
-Una función puede aceptar diferentes tipos de argumentos al mismo tiempo. **El orden de los argumentos** en la definición de la función es el siguiente: posicionales, con nombre, \*args, \*\*kwargs.
+Una función puede aceptar **diferentes tipos de argumentos** al mismo tiempo. **El orden de los argumentos** en la definición de la función es el siguiente: posicionales, con nombre, \*args, \*\*kwargs.
 
 Ejemplo:
 ```
@@ -438,4 +438,40 @@ example(1, b = 10, c = 10, d = 20,)
 ```
 
 # ¿Qué es una función Lambda en Python?
+**Una función lambda** es una función que se define utilizando la palabra clave **lambda**. A diferencia de las funciones normales, que se definen utilizando la palabra clave **def**. Las funciones lambda suelen utilizarse para operaciones simples o cuando se necesita pasar una pequeña función como argumento a otra función. Estas funciones generalmente realizan acciones pequeñas y de una sola vez.
+
+Ejemplo de una función lambda:
+```
+full_name = lambda first, last: f"{first} {last}"
+```
+La sintaxis contiene la palabra clave **lambda**, luego se pasan los argumentos y, después de los dos puntos, se indica lo que queremos que se devuelva con **return**.
+Esta función también se puede escribir de la manera habitual:
+```
+def full_name(first, last):
+  return f"{first} {last}"
+```
+
+Ejemplo del uso de una función lambda dentro de otra función:
+```
+full_name = lambda first, last: f"{first} {last}"
+
+def greeting(user):
+  print(f"Hi, {user}!")
+
+
+greeting(full_name("Tetiana", "Kononenko"))
+```
+Con la sintaxis habitual, se vería así:
+```
+def full_name(first, last):
+  return f"{first} {last}"
+
+
+def greeting(user):
+  print(f"Hi, {user}!")
+
+  
+greeting(full_name("Tetiana", "Kononenko"))
+```
+
 # ¿Qué es un paquete pip?
