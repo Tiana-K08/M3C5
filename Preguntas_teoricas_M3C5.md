@@ -289,3 +289,153 @@ Sin embargo, hay situaciones en las que no se recomienda utilizar List Comprehen
 - la expresión es muy larga y se pierde la legibilidad;
 - hay muchas condiciones o bucles anidados.
 En esos casos, es mejor usar la sintaxis del bucle **for** tradicional.
+
+# ¿Qué es un argumento en Python?
+**Un argumento** en Python es un valor que se pasa a una función cuando se llama. Con la ayuda de los argumentos, podemos controlar el comportamiento de la función y proporcionarle datos para procesar.
+
+Las funciones en Python pueden aceptar:
+- argumentos posicionales;
+- argumentos con nombre (keyword arguments);
+- argumentos con valores predeterminados;
+- una cantidad variable de argumentos (desempaquetado de argumentos).
+
+---
+**Los argumentos posicionales** son los argumentos más básicos. El orden en que se pasan es importante, es decir, los valores se pasan a la función en el mismo orden en que están definidos los parámetros.
+
+Ejemplo:
+```
+def greet(first, last):
+  print(f"Hi, {first} {last}!")
+
+
+greet("Tetiana", "Kononenko")
+# Hi, Tetiana Kononenko!
+
+greet("Kononenko", "Tetiana")
+# Hi, Kononenko Tetiana!
+```
+En este ejemplo, la forma en que se usan los argumentos introducidos se determina por su posición. El orden en el que pasamos los argumentos a la función es muy importante.
+
+---
+En funciones simples, es fácil y cómodo usar argumentos posicionales, pero cuando hay muchos argumentos, esto puede causar confusión.
+Cuando se pasan más de dos argumentos a una función, es mejor usar **argumentos con nombre (keyword arguments)**. De esta manera, podemos especificar claramente la posición de cada argumento y evitar confusiones.
+
+**Los argumentos con nombre** permiten indicar explícitamente a qué parámetro corresponde cada valor. Esto elimina la dependencia del orden.
+
+Ejemplo:
+```
+def greet(first, last, status):
+  print(f"Hi, {first} {last}! You are logged in as a {status}.")
+
+
+greet("seller", "Tetiana", "Kononenko")
+# Hi, seller Tetiana! You are logged in as a Kononenko.
+# Aquí el orden de los argumentos depende de la posición y no se muestra correctamente
+
+greet(status = "seller", first = "Tetiana", last = "Kononenko")
+# Hi, Tetiana Kononenko! You are logged in as a seller.
+# Aquí se utilizan argumentos con nombre y se muestran correctamente
+```
+
+---
+Se puede establecer **un valor predeterminado** para los argumentos; así, al llamar a la función sin especificar dichos argumentos, se utilizará el valor predeterminado.
+
+Ejemplo:
+```
+def greet(name = "guest"):
+  print(f"Hello, {name}!")
+
+
+greet()           # Hello, guest!
+greet("Tetiana")  # Hello, Tetiana!
+```
+
+Si se utiliza un **objeto mutable** (por ejemplo, una lista) como valor predeterminado, este se conservará entre las llamadas a la función, lo que puede provocar errores.
+
+Ejemplo:
+```
+def append_to_list(my_list = []):
+  my_list.append(1)
+  return my_list
+
+
+print(append_to_list())  # [1]
+print(append_to_list())  # [1, 1] — ¡de repente!
+```
+
+***¡Importante!*** Establecer listas como argumento predeterminado es una muy mala práctica, ya que las listas son mutables. Es mejor evitar este enfoque.
+
+---
+Para pasar una **cantidad variable de argumentos** a una función, se suele usar la palabra clave **\*args**. Esto permite pasar cualquier cantidad de argumentos, que serán recopilados en una tupla.
+
+Se puede usar cualquier otro nombre (**\*nombre**), pero por convención general se utiliza **\*args**.
+
+Ejemplo:
+```
+def sum_numbers(*args):
+  print(sum(args))
+
+
+sum_numbers(4, 2, 6)  # 12
+```
+
+Ejemplo de desempaquetado y unión en una sola cadena:
+```
+def my_fruits(*args):
+  print(f"My favorite fruits are: {', '.join(args)}")
+
+
+my_fruits("apple", "kiwi", "pear")
+# My favorite fruits are: apple, kiwi, pear
+```
+En este ejemplo, los argumentos se desempaquetan y se imprimen en una sola línea gracias al método **.join()**.
+Si se desempaquetan los argumentos sin este método, se mostrarán como una tupla común:
+```
+def my_fruits(*args):
+  print(f"My favorite fruits are: {args}")
+
+
+my_fruits("apple", "kiwi", "pear")
+# My favorite fruits are: ('apple', 'kiwi', 'pear')
+```
+
+---
+También se puede pasar a una función **una cantidad variable de argumentos con nombre** utilizando la palabra clave **\*\*kwargs** (convención ampliamente aceptada). Todos los argumentos con nombre se recopilan en un diccionario.
+
+Ejemplo:
+```
+def greeting(**kwargs):
+  print(f"Hi, {kwargs['first']} {kwargs['last']}, have a great day!")
+
+
+greeting(first = "Tetiana", last = "Kononenko")
+# Hi, Tetiana Kononenko, have a great day!
+```
+
+---
+Una función puede aceptar diferentes tipos de argumentos al mismo tiempo. **El orden de los argumentos** en la definición de la función es el siguiente: posicionales, con nombre, \*args, \*\*kwargs.
+
+Ejemplo:
+```
+def example(a, b = 0, *args, **kwargs):
+  print(f"a = {a}, b = {b}, args = {args}, kwargs = {kwargs}")
+
+
+example(1, 10, 5, 6, 15, 4, c = 10, d = 20,)
+# a = 1, b = 10, args = (5, 6, 15, 4), kwargs = {'c': 10, 'd': 20}
+```
+
+***¡Importante!*** Los argumentos posicionales no pueden ser especificados después de los argumentos con nombre — esto es un error de sintaxis.
+
+Ejemplo:
+```
+def example(a, b = 0, *args, **kwargs):
+  print(f"a = {a}, b = {b}, args = {args}, kwargs = {kwargs}")
+
+
+example(1, b = 10, c = 10, d = 20,)
+# a = 1, b = 10, args = (), kwargs = {'c': 10, 'd': 20}
+```
+
+# ¿Qué es una función Lambda en Python?
+# ¿Qué es un paquete pip?
